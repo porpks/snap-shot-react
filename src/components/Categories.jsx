@@ -34,7 +34,7 @@ function Categories() {
                 <div className="flex justify-center mt-2">
                     {colorList.map((item, index) => {
                         return (
-                            <button key={index} className={`bg-${item}-600 text-white px-3 mx-4 rounded-lg hover:font-semibold hover:ring active:text-slate-400 active:scale-95`}
+                            <button key={index} className={`text-${item} px-3 mx-4 rounded-lg hover:font-semibold hover:underline active:text-slate-400 active:scale-95`}
                                 onClick={() => handleColor(item)}>
                                 {item}
                             </button>
