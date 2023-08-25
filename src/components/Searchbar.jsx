@@ -1,6 +1,5 @@
 import { useState, useContext } from "react"
 import { ImageContext } from "../context/ImageContext.jsx"
-import axios from "axios"
 
 function Searchbar() {
     const context = useContext(ImageContext)
@@ -8,13 +7,8 @@ function Searchbar() {
 
     const handleSubmit = async (event) => {
         event.preventDefault()
-        const params = {
-            query: "food",
-            per_page: 20,
-        }
-        const result = await axios.get(`https://api.pexels.com/v1/search`, { headers: { Authorization: 'KUZ25Iu4lWwSu2SHbcpvpVPpXrwKibLr9GRsKwKNKOjb52QPgZvQreJS' }, params })
-        context.setImages(result.data.photos)
-        console.log(input);
+        context.setKeyword(input)
+        context.getImage()
     }
 
     return (
