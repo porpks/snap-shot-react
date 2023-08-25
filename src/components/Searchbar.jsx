@@ -9,6 +9,7 @@ function Searchbar() {
         event.preventDefault()
         context.setKeyword(input)
         context.getImage()
+        setInput("")
     }
 
     return (
