@@ -7,11 +7,13 @@ function ImageContextProvider(props) {
     const [keyword, setKeyword] = useState("Mountain")
     const [color, setColor] = useState("")
     const [images, setImages] = useState([])
+    const [page, setPage] = useState(1)
 
     const getImage = async () => {
         let params = {
             query: keyword,
-            per_page: 20,
+            per_page: 24,
+            page: page
         }
         if (color) {
             params = {
@@ -25,7 +27,9 @@ function ImageContextProvider(props) {
     }
 
     return (
-        <ImageContext.Provider value={{ keyword, setKeyword, color, setColor, images, setImages, getImage }}>
+        <ImageContext.Provider value={{
+            keyword, setKeyword, color, setColor, images, setImages, page, setPage, getImage
+        }}>
             {props.children}
         </ImageContext.Provider>
     )
