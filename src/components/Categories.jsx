@@ -12,7 +12,7 @@ function Categories() {
                 <button className="bg-indigo-900 text-white px-4 py-1 mx-4 rounded-lg hover:font-semibold hover:ring active:text-slate-400 active:scale-95"
                 >Food</button>
             </div>
-            <div className="flex flex-col items-center mt-6">
+            <div className="flex flex-col items-center mt-4">
                 <h1>what color you like:</h1>
                 <div className="flex justify-center mt-2">
                     <button className="bg-red-600 text-white px-3 mx-4 rounded-lg hover:font-semibold hover:ring active:text-slate-400 active:scale-95"
